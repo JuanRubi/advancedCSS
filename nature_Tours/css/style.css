@@ -51,11 +51,14 @@ body {
     top: 50%;   /* In relation to its parent element. */
     left: 50%;
     transform: translate(-50%, -50%); /* (width, height) to translate of element. */
+    text-align: center;
 }
 
 .heading {
     color: #fff;
     text-transform: uppercase;
+
+    margin-bottom: 50px;
 }
 
 .heading-main {
@@ -108,4 +111,31 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+/* pseudo class - special state of selector (link in this case) */
+.button:link,
+.button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 50px;
+
+    transition: all 0.2s;  /* transition property has to be on the initial state. */
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-heading {
+    background-color: #fff;
+    color: #777;
 }
