@@ -113,6 +113,18 @@ body {
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* pseudo class - special state of selector (link in this case) */
 .button:link,
 .button:visited {
@@ -123,6 +135,7 @@ body {
     border-radius: 50px;
 
     transition: all 0.2s;  /* transition property has to be on the initial state. */
+    position: relative;
 }
 
 .button:hover {
@@ -138,4 +151,37 @@ body {
 .button-heading {
     background-color: #fff;
     color: #777;
+}
+
+.button::after {
+    /* Need to set content and display for it to work. Even if content is empty. */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+
+    /* Setting it behind the button. */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    transition: all 0.4s;
+}
+
+.button-heading::after {
+    background-color: #fff;
+}
+
+.button:hover::after {
+    transform: scaleX(1.3) scaleY(1.4);
+    opacity: 0;
+}
+
+.button-animation {
+    animation: moveInBottom 1s ease-out 0.5s;
+    
+    /* Apply 0% animation styles before animation starts. */
+    animation-fill-mode: backwards;
 }
