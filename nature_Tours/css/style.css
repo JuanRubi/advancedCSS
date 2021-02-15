@@ -8,20 +8,28 @@ Dark green: #28b485
 */
 
 /* * is a universal selector applies changes to all selectors */
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+/* Allows us to change the size of every rem unit declarations from one place. */
+html {
+    font-size: 62.5%;  /* 100% is 16px the default */
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
 
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -38,12 +46,12 @@ body {
 
 .logo-container {
     position: absolute;
-    top: 40px;  /* In relation to its parent element. */
-    left: 40px;
+    top: 4rem;  /* In relation to its parent element. */
+    left: 4rem;
 }
 
 .logo {
-    height: 45px;
+    height: 4.5rem;
 }
 
 .main-title {
@@ -58,14 +66,14 @@ body {
     color: #fff;
     text-transform: uppercase;
 
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
 }
 
 .heading-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: moveInLeft;
     animation-duration: 1.5s;
@@ -80,9 +88,9 @@ body {
 
 .heading-submain {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.3px;
+    letter-spacing: 1.73rem;
 
     animation: moveInRight 1.5s ease-out;
 }
@@ -92,7 +100,7 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     100% {
@@ -104,7 +112,7 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     100% {
@@ -116,7 +124,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     100% {
@@ -130,9 +138,10 @@ body {
 .button:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 10px 30px;
+    padding: 1rem 3rem;
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 5rem;
+    font-size: 1.6rem;
 
     transition: all 0.2s;  /* transition property has to be on the initial state. */
     position: relative;
@@ -140,12 +149,12 @@ body {
 
 .button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .button:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .button-heading {
@@ -159,7 +168,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 50px;
+    border-radius: 5rem;
 
     /* Setting it behind the button. */
     position: absolute;
@@ -181,7 +190,7 @@ body {
 
 .button-animation {
     animation: moveInBottom 1s ease-out 0.5s;
-    
+
     /* Apply 0% animation styles before animation starts. */
     animation-fill-mode: backwards;
 }
