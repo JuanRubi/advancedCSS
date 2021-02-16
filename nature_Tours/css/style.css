@@ -44,17 +44,17 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* From top left clockwise. */
 }
 
-.logo-container {
+.header__logo-container {
     position: absolute;
     top: 4rem;  /* In relation to its parent element. */
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 4.5rem;
 }
 
-.main-title {
+.header__main-title {
     position: absolute;
     top: 50%;   /* In relation to its parent element. */
     left: 50%;
