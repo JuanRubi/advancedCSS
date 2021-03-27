@@ -1,0 +1,47 @@
+
+/*----------------------------------------------------------------------------------------
+    This file contains the typography elements of the project. 7-1 CSS Architecture.
+----------------------------------------------------------------------------------------*/
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-dark-grey;
+
+    padding: 3rem;
+}
+
+.heading {
+    color: $color-white;
+    text-transform: uppercase;
+
+    margin-bottom: 5rem;
+
+    &-main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+
+        animation-name: moveInLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+
+        /* Other animation properties: 
+        animation-delay: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: ease-in; multiple functions available for this property
+        */
+    }
+
+    &-submain {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.73rem;
+
+        animation: moveInRight 1.5s ease-out;
+    }
+}

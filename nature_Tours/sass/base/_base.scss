@@ -1,0 +1,23 @@
+
+/*----------------------------------------------------------------------------------------
+    This file contains the base structure of the project. 7-1 CSS Architecture.
+----------------------------------------------------------------------------------------*/
+
+/* * is a universal selector applies changes to all selectors */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+/* Allows us to change the size of every rem unit declarations from one place. */
+html {
+    font-size: 62.5%;  /* 100% is 16px the default */
+}
+
+body {
+    box-sizing: border-box;
+}

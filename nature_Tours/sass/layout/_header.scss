@@ -1,0 +1,34 @@
+
+/*----------------------------------------------------------------------------------------
+    This file contains the header elements of the project. 7-1 CSS Architecture.
+----------------------------------------------------------------------------------------*/
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8),
+     rgba($color-primary-dark, 0.8)) , url(../images/hero.jpg);
+    background-size: cover;
+    background-position: top;  /* Ensures top of image stays at the top. */
+    position: relative; 
+    
+    /* Creating the shape of the background images. */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* From top left clockwise. */
+
+    &__logo-container {
+        position: absolute;
+        top: 4rem;  /* In relation to its parent element. */
+        left: 4rem;        
+    }
+
+    &__logo {
+        height: 4.5rem;
+    }
+
+    &__main-title {
+        position: absolute;
+        top: 50%;   /* In relation to its parent element. */
+        left: 50%;
+        transform: translate(-50%, -50%); /* (width, height) to translate of element. */
+        text-align: center;
+    }
+}
