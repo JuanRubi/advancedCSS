@@ -1,0 +1,13 @@
+
+/*----------------------------------------------------------------------------------------
+    This file contains any mixins used in the project. 7-1 CSS Architecture.
+----------------------------------------------------------------------------------------*/
+
+// Fixes missing vertical spacing when columns are floated.
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
