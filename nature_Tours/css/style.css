@@ -113,6 +113,15 @@ body {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 /*----------------------------------------------------------------------------------------
+    This contains the styling for utility classes. Simple classes that can be reused. 7-1 CSS Architecture.
+----------------------------------------------------------------------------------------*/
+.utility-center-text {
+  text-align: center; }
+
+.utility-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
+/*----------------------------------------------------------------------------------------
     This file contains home button styles. 7-1 CSS Architecture.
 ----------------------------------------------------------------------------------------*/
 /* pseudo class - special state of selector (link in this case) */
@@ -164,11 +173,10 @@ body {
   animation-fill-mode: backwards; }
 
 /*----------------------------------------------------------------------------------------
-    This contains the styling for the grid layout in the website.
+    This contains the styling for the grid layout in the website. 7-1 CSS Architecture.
 ----------------------------------------------------------------------------------------*/
 .row {
   max-width: 144rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -177,7 +185,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: blue;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
@@ -224,7 +231,7 @@ body {
     text-align: center; }
 
 /*----------------------------------------------------------------------------------------
-    This contains the styling for the content only found in home page.
+    This contains the styling for the content only found in home page. 7-1 CSS Architecture.
 ----------------------------------------------------------------------------------------*/
 .section-about {
   background-color: #f7f7f7;

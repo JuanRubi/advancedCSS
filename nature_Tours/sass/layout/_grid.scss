@@ -1,11 +1,11 @@
 
 /*----------------------------------------------------------------------------------------
-    This contains the styling for the grid layout in the website.
+    This contains the styling for the grid layout in the website. 7-1 CSS Architecture.
 ----------------------------------------------------------------------------------------*/
 
 .row {
     max-width: $grid-width;
-    background-color: #eee;
+    //background-color: #eee;
     margin: 0 auto;
 
     &:not(:last-child) {
@@ -16,7 +16,7 @@
 
     // Selects all the elements with class attribute starting with(^ symbol) col-.
     [class^="col-"] {
-        background-color: blue;
+        //background-color: blue;
         float: left;
 
         &:not(:last-child) {
